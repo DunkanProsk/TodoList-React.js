@@ -47,7 +47,10 @@ function App() {
       <div className='wrapper'>
         <h1>To-Do List</h1>
         <AddTodo onCreate={addTodo}/>
-        <p align='center'>Total: {todoList.length} Completed: {valComp()}</p>
+        <p 
+        align='center'
+        className='stat'
+        >Total: {todoList.length} &nbsp; &nbsp; Completed: {valComp()}</p>
         {todoList.length
           ? <TodoList todo={todoList} onToggle={toggleTodo}/> 
           : <p align='center'>no todos</p>
