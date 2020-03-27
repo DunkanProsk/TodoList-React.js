@@ -14,6 +14,8 @@ export default function TodoList(props) {
         <ul style={styles.ul}>
             {props.todo.map((todo, index) => {
                 return <TodoItem 
+
+                        removeTodo={props.removeTodo}
                         todo={todo}
                         key={todo.id}
                         index={index}

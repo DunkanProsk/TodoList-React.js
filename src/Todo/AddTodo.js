@@ -9,14 +9,14 @@ const styles = {
     },
 }
 
-function AddTodo({ onCreate }) {
+function AddTodo(props) {
     const [value, setValue] = useState('');
 
     function submitHandler(event) {
         event.preventDefault();
 
         if(value.trim()) {
-            onCreate(value);
+            props.onCreate(value);
             setValue('');
         };
     };

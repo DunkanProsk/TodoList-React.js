@@ -40,23 +40,24 @@ function App() {
     };
     return val;
   };
-  
 
   return (
-    <Context.Provider value={{ removeTodo }}> 
-      <div className='wrapper'>
-        <h1>To-Do List</h1>
-        <AddTodo onCreate={addTodo}/>
-        <p 
-        align='center'
-        className='stat'
-        >Total: {todoList.length} &nbsp; &nbsp; Completed: {valComp()}</p>
-        {todoList.length
-          ? <TodoList todo={todoList} onToggle={toggleTodo}/> 
-          : <p align='center'>no todos</p>
-        }
-      </div>
-    </Context.Provider> 
+    <div className='wrapper'>
+      <h1>To-Do List</h1>
+      <AddTodo onCreate={addTodo}/>
+      <p 
+      align='center'
+      className='stat'
+      >Total: {todoList.length} &nbsp; &nbsp; Completed: {valComp()}</p>
+      {todoList.length
+        ? <TodoList
+          todo={todoList}
+          onToggle={toggleTodo}
+          removeTodo={removeTodo}
+          /> 
+        : <p align='center'>no todos</p>
+      }
+    </div>
   );
 };
 
