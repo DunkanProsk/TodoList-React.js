@@ -1,4 +1,8 @@
 body {
+  font-family: 'Comfortaa', cursive;
+  font-size: 16px;
+  color: rgb(120, 120, 122);
+  text-shadow: 1px 1px 1px #fff;
   background-color: #EBECF0;
   margin: 0;
   font-family: 'Comfortaa', cursive;
@@ -6,87 +10,28 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-body, p, input, select, textarea, button {
-  font-family: 'Comfortaa', cursive;
-  font-size: 16px;
+.body__input {
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #ffffff;
 }
 
-h1 {
-  color: #BABECC;
-  text-shadow: 1px 1px 1px #ffffff;
-  display: flex;
-  justify-content: center;
-  font-size: 40px;
-  -webkit-appearance: none;
-}
-
-.stat {
-  margin-bottom: 20px;
-}
-
-input, .buttonAdd{
-  border: 0;
-  outline: 0;
-  font-size: 16px;
-  border-radius: 15px;
-  padding: 16px;
-}
-
-.inputTodo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 20px;
-  background-color: #EBECF0;
-  text-shadow: 1px 1px 0 #ffffff;
-  box-shadow:  inset 1px 1px 2px #BABECC, inset -1px -1px 2px #ffffff;
-  width: 80%;
-  box-sizing: border-box;
-  transition: all 0.2s ease-in-out;
-  appearance: none;
-  -webkit-appearance: none;
-}
-
-.inputTodo:focus {
+.body__input:focus {
   box-shadow:  inset 2px 2px 5px #BABECC, inset -5px -5px 20px #ffffff;
 }
 
-.buttonAdd {
-  border-radius: 15px;
-  background-color: #EBECF0;
-  text-shadow: 1px 1px 0 #ffffff;
-  width: 15%;
-  box-sizing: border-box;
-  transition: all 0.2s ease-in-out;
-  appearance: none;
-  -webkit-appearance: none;
-  color:#61677C;
-  font-weight: bold;
+.body__button {
   box-shadow: -5px -5px 15px #ffffff,  5px 5px 15px #BABECC;
-  transition: all 0.2s ease-in-out;
-  cursor: pointer;
-  font-weight: 600;
 }
 
-.buttonAdd:hover {
+.body__button:hover {
   box-shadow: -2px -2px 5px #fff, 2px 2px 5px #BABECC;
 }
 
-.buttonAdd:active {
+.body__button:active {
   box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #ffffff;
 }
 
 li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 1rem;
-  border: 0px solid;
-  border-radius: 15px;
-  background: #EBECF0;
   box-shadow: -2px -2px 5px #fff, 2px 2px 5px #BABECC;
-  margin-bottom: 1.5rem;
-  transition: 0.4s;
 }
 
 li:hover {
@@ -94,41 +39,16 @@ li:hover {
   box-shadow: -5px -5px 20px #ffffff, 5px 5px 20px #BABECC;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-}
-
-div, p {
-  color: rgb(120, 120, 122);
-  text-shadow: 1px 1px 1px #fff;
-}
-
-.wrapper {
-  padding: 1rem 3rem;
-  margin: 0 auto;
-  width: 600px;
-}
-
-.rm {
+.body__button--remove {
+  background-color: #EBECF0;
   transition: 0.4s;
   color: #BABECC;
   border: 0px solid;
 }
 
-.rm:hover {
+.body__button--remove:hover {
   transition: 0.4s;
   color: #000000;
   border: 0px solid;
-}
-
-.done {
-  text-decoration: line-through;
-}
-
-button {
-  background-color: #EBECF0;
-}
-
-button:focus {
   outline: 0;
 }

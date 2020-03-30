@@ -1,7 +1,28 @@
 import React from 'react';
 import TodoList from './Todo/TodoList';
-import Context from './context';
 import AddTodo from './Todo/AddTodo';
+
+const styles = {
+  body: {
+    padding: "1rem 3rem",
+    margin: "0 auto",
+    width: "600px",
+  },
+
+  body__title: {
+    color: '#BABECC',
+    textShadow: '1px 1px 1px #ffffff',
+    display: 'flex',
+    justifyContent: 'center',
+    fontSize: '40px',
+  },
+
+  body__text: {
+    textAlign: 'center',
+    marginBottom: '20px',
+  },
+
+};
 
 function App() {
   const [todoList, setTodoList] = React.useState([
@@ -42,20 +63,19 @@ function App() {
   };
 
   return (
-    <div className='wrapper'>
-      <h1>To-Do List</h1>
+    <div style={styles.body}>
+      <h1 style={styles.body__title}>To-Do List</h1>
       <AddTodo onCreate={addTodo}/>
-      <p 
-      align='center'
-      className='stat'
-      >Total: {todoList.length} &nbsp; &nbsp; Completed: {valComp()}</p>
+      <p style={styles.body__text}>
+        Total: {todoList.length} &nbsp; &nbsp; Completed: {valComp()}
+      </p>
       {todoList.length
         ? <TodoList
           todo={todoList}
           onToggle={toggleTodo}
           removeTodo={removeTodo}
           /> 
-        : <p align='center'>no todos</p>
+        : <p style={styles.body__text}>no todos</p>
       }
     </div>
   );
