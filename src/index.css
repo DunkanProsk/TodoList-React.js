@@ -5,9 +5,12 @@ body {
   text-shadow: 1px 1px 1px #fff;
   background-color: #EBECF0;
   margin: 0;
-  font-family: 'Comfortaa', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font-family: 'Comfortaa', cursive;
 }
 
 .body__input {
@@ -27,6 +30,23 @@ body {
 }
 
 .body__button:active {
+  box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #ffffff;
+}
+
+.body__buttonFil {
+  box-shadow: -4px -4px 12px #ffffff,  4px 4px 12px #BABECC;
+}
+
+.body__buttonFilAct {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #BABECC;
+}
+
+
+.body__buttonFil:hover {
+  box-shadow: -2px -2px 5px #fff, 2px 2px 5px #BABECC;
+}
+
+.body__buttonFil:active {
   box-shadow: inset 1px 1px 2px #BABECC, inset -1px -1px 2px #ffffff;
 }
 
@@ -51,4 +71,8 @@ li:hover {
   color: #000000;
   border: 0px solid;
   outline: 0;
+}
+
+.done {
+  text-decoration: line-through;
 }

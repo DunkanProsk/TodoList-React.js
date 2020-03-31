@@ -65,13 +65,13 @@ function AddTodo(props) {
                 value={value}
                 onChange={event => setValue(event.target.value)}
                 style={styles.body__input}
-                className='body__input' //????
+                className='body__input'
             />
             <button
                 type='submit'
                 style={styles.body__button}
-                className='body__button' //????
-            >Add</button>
+                className='body__button'
+            >ADD</button>
         </form>
     );
 };
